@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube - Web Prep</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+      
+      body {
+        display: flex;
+        margin: 0;
+        height: 100vh;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      .main {
+        width: 100%;
+      }
+      
+      .topbar {
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .content {
+        height: 92vh;
+        overflow-y: auto;
+        padding: 20px;
+      }
+      
+      .icon {
+        height: 8vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2em;
+        cursor: pointer;
+      }
+      
+      .icon ion-icon {
+        font-size: 2em;
+      }
+      
+      .icon p {
+        margin: 0;
+      }
+      
+      .icon:not(:first-of-type) {
+        height: 16vh;
+      }
+      
+      .logo {
+        height: 50%;
+      }
+      
+      .search-wrapper {
+        display: flex;
+        height: 50%;
+        width: 30%;
+      }
+      
+      .search-wrapper input {
+        width: 100%;
+        padding: 0 1em;
+      }
+      
+      .icons-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      
+      .top-icon {
+        font-size: 2em;
+        padding: 0 0.5em;
+      }
+      
+      .mic-icon {
+        display: flex;
+        align-items: center;
+      }
+      
+      .search-btn {
+        padding: 0 0.7em;
+        font-size: 1.3em;
+        display: flex;
+        align-items: center;
+      }
+      
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      
+      .video-item {
+        cursor: pointer;
+      }
+      
+      .video-thumbnail {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+      
+      .video-info {
+        margin-top: 10px;
+      }
+      
+      .video-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .video-channel, .video-stats {
+        font-size: 0.9em;
+        color: #606060;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="icon">
+        <ion-icon name="menu-sharp"></ion-icon>
+      </div>
+      <div class="icon">
+        <ion-icon name="home-outline"></ion-icon>
+        <p>Home</p>
+      </div>
+      <div class="icon">
+        <ion-icon name="compass-outline"></ion-icon>
+        <p>Explore</p>
+      </div>
+      <div class="icon">
+        <ion-icon name="albums-outline"></ion-icon>
+        <p>Library</p>
+      </div>
+    </div>
+    <div class="main">
+      <div class="topbar">
+        <img class="logo" src="assets/yt-logo.svg" alt="yt-logo" />
+        <div class="search-wrapper">
+          <input type="text" placeholder="Search on YouTube" />
+          <button class="search-btn">
+            <ion-icon name="search"></ion-icon>
+          </button>
+          <div class="top-icon mic-icon">
+            <ion-icon name="mic-sharp"></ion-icon>
+          </div>
+        </div>
+        <div class="icons-wrapper">
+          <div class="top-icon">
+            <ion-icon name="videocam-outline"></ion-icon>
+          </div>
+          <div class="top-icon">
+            <ion-icon name="notifications-outline"></ion-icon>
+          </div>
+          <div class="top-icon">
+            <ion-icon name="person-circle-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="video-grid">
+          <div class="video-item">
+            <img src="https://picsum.photos/250/140" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="video-info">
+              <div class="video-title">Amazing Travel Vlog: Exploring Hidden Gems</div>
+              <div class="video-channel">TravelWithMe</div>
+              <div class="video-stats">1.2M views • 2 days ago</div>
+            </div>
+          </div>
+          <div class="video-item">
+            <img src="https://picsum.photos/250/140" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="video-info">
+              <div class="video-title">Learn Python in 30 Minutes</div>
+              <div class="video-channel">CodeMaster</div>
+              <div class="video-stats">500K views • 1 week ago</div>
+            </div>
+          </div>
+          <div class="video-item">
+            <img src="https://picsum.photos/250/140" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="video-info">
+              <div class="video-title">10 Easy Recipes for Beginners</div>
+              <div class="video-channel">CookWithMe</div>
+              <div class="video-stats">2M views • 3 weeks ago</div>
+            </div>
+          </div>
+          <div class="video-item">
+            <img src="https://picsum.photos/250/140" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="video-info">
+              <div class="video-title">The History of Ancient Rome</div>
+              <div class="video-channel">HistoryBuff</div>
+              <div class="video-stats">750K views • 5 days ago</div>
+            </div>
+          </div>
+          <div class="video-item">
+            <img src="https://picsum.photos/250/140" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="video-info">
+              <div class="video-title">Relaxing Piano Music for Studying</div>
+              <div class="video-channel">ChillTunes</div>
+              <div class="video-stats">3M views • 2 months ago</div>
+            </div>
+          </div>
+          <div class="video-item">
+            <img src="https://picsum.photos/250/140" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="video-info">
+              <div class="video-title">Extreme Sports Compilation 2023</div>
+              <div class="video-channel">AdrenalineJunkie</div>
+              <div class="video-stats">5M views • 1 month ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
